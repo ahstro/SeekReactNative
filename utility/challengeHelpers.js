@@ -245,7 +245,6 @@ const setupChallenges = async ( isAdmin: boolean ): Promise<any> => {
           }
         }
       } );
-      console.log( realm.objects( "ChallengeRealm" ), "challenge realm" );
     } );
   } catch ( e ) {
     console.log( "[DEBUG] Failed to setup challenges: ", e );

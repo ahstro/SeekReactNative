@@ -25,9 +25,7 @@ const checkForInternet = (): Promise<?string> => (
 );
 
 const capitalizeNames = ( name: string ): ?string => {
-  if ( name === null ) {
-    return;
-  }
+  if ( !name ) { return; }
   const titleCaseName = name.split( " " )
     .map( ( string ) => string.charAt( 0 ).toUpperCase() + string.substring( 1 ) )
     .join( " " );

@@ -164,11 +164,14 @@ const SpeciesNearby = ( ): Node => {
           dispatch( { type: "SET_LOADING", loading: false } );
          } )
         .catch( ( e ) => { // SyntaxError: JSON Parse error: Unrecognized token '<'
-          if ( e instanceof SyntaxError ) { // this is from the iNat server being down
-            updateDowntimeError( );
-          } else if ( e.message === "Network request failed" ) {
+          if ( e.message === "Network request failed" ) {
             dispatch( { type: "ERROR", error: "internet_error" } );
           }
+          // if ( e instanceof SyntaxError ) { // this is from the iNat server being down
+          //   updateDowntimeError( );
+          // } else if ( e.message === "Network request failed" ) {
+          //   dispatch( { type: "ERROR", error: "internet_error" } );
+          // }
         } );
     };
 
