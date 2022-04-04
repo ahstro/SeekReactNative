@@ -26,7 +26,7 @@ type Props = {
 const ChallengeTitle = ( { challenge }: Props ): React.Node => (
   <>
     <Text style={textStyles.challengeHeader}>
-      {formatMonthYear( challenge.availableDate ).toLocaleUpperCase()}
+      {challenge.availableDate && formatMonthYear( challenge.availableDate ).toLocaleUpperCase()}
     </Text>
     <Text style={textStyles.challengeName}>
       {i18n.t( challenge.name ).toLocaleUpperCase()}

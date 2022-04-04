@@ -182,7 +182,7 @@ const createShortMonthsList = ( ): Array<string> => {
   } );
 };
 
-const formatMonthYear = ( date: Date ): string => format( date, "MMMM yyyy", setLocale( ) );
+const formatMonthYear = ( date: Date ): string => date && format( date, "MMMM yyyy", setLocale( ) );
 
 const formatMonth = ( date: Date ): string => format( date, "MMMM", setLocale( ) );
 
